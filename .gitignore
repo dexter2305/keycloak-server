@@ -1,0 +1,3 @@
+# avoid keys & crt
+keycloak.crt
+keycloak.key

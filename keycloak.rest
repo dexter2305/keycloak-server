@@ -1,0 +1,36 @@
+# global scope
+
+https://localhost:8443
+
+--location
+--insecure
+--include
+--silent
+
+--
+# end of global scope
+
+# request 0
+--
+
+# get wellknown endpoints
+--
+Authentication: $BASIC(admin, admin)
+Accept: application/json
+GET /realms/demo/.well-known/openid-configuration
+
+# get token
+--
+Content-Type: application/x-www-form-urlencoded
+POST /realms/demo/protocol/openid-connect/token
+client_id=demo-app
+client_secret=jfO0GCohzizLxYJubzJAZB4NoxK6KihZ
+grant_type=password
+username=demo
+password=manage
+
+#curl -X POST https://localhost:8443/realms/demo/protocol/openid-connect/token
+#--insecure --location
+#-H "Content-Type: application/x-www-form-urlencoded" 
+#-H "Accept: application/json" 
+#-d "client_id=demo-app&client_secret=jfO0GCohzizLxYJubzJAZB4NoxK6KihZ&grant_type=password&username=demo&password=manage" 

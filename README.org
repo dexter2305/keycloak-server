@@ -1,0 +1,10 @@
+#title: Setting up keycloak
+
+* How to start keycloak?
+  Just run ~make keycloak-start~.
+
+* Test
+  Refer rest file ~keycloak.rest~
+
+* Clean
+  Run ~make clean~
